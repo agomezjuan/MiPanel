@@ -1,0 +1,47 @@
+@use './_global' as *
+
+.container
+    flex-grow: 1
+    display: contents
+.main
+    @include mainContainer
+
+    .banner
+        @include flex(column, center, center)
+        flex-grow: 1
+        width: 100%
+        padding: 1rem
+        img
+            margin-bottom: 1rem
+            width: 100%
+            max-width: 200px
+            @include mq("small")
+                width: 100%
+                max-width: 400px
+
+    .form
+        @include flex(column, center, center)
+        flex-grow: 1
+        width: 100%
+        padding: 2rem
+        background-color: $tertiary-color-light
+        border-radius: 1rem
+        @include mq("medium")
+            align-self: stretch
+            margin: 1rem
+        h1
+            font-size: 2.5rem
+            margin-bottom: 1rem
+            color: $secondary-color
+            max-width: 400px
+        .button
+            @include button($secondary-color, $main-color)
+            margin-top: 1rem
+        .link
+            @include button($secondary-color, $tertiary-color-dark)
+            margin-top: 1rem
+            padding: 1rem 2rem
+            text-transform: uppercase
+            text-align: center
+            text-decoration: none
+            color: $secondary-color

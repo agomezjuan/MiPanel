@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/MiPanel/static/css/main.4696e428.css",
+    "main.js": "/MiPanel/static/js/main.c897dc6d.js",
+    "static/js/787.ab6962e0.chunk.js": "/MiPanel/static/js/787.ab6962e0.chunk.js",
+    "static/media/users.png": "/MiPanel/static/media/users.9bf2a0a549f5377ad78e.png",
+    "static/media/female.png": "/MiPanel/static/media/female.a2ca73d6c3833c98ef4f.png",
+    "static/media/male.png": "/MiPanel/static/media/male.235854ae4e2bf7154d28.png",
+    "static/media/404.png": "/MiPanel/static/media/404.9fd7a60f18ec8cec926b.png",
+    "static/media/user3.png": "/MiPanel/static/media/user3.cf989c3d340f63aee419.png",
+    "static/media/user2.png": "/MiPanel/static/media/user2.cd08633dc2933f7c78f8.png",
+    "static/media/user4.png": "/MiPanel/static/media/user4.a08e101c507f030aba98.png",
+    "static/media/user1.png": "/MiPanel/static/media/user1.583f81d1d173e1b25f9a.png",
+    "index.html": "/MiPanel/index.html",
+    "main.4696e428.css.map": "/MiPanel/static/css/main.4696e428.css.map",
+    "main.c897dc6d.js.map": "/MiPanel/static/js/main.c897dc6d.js.map",
+    "787.ab6962e0.chunk.js.map": "/MiPanel/static/js/787.ab6962e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4696e428.css",
+    "static/js/main.c897dc6d.js"
+  ]
+}

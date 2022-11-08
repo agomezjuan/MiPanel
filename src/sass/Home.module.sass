@@ -1,0 +1,68 @@
+@use './_global' as *
+
+.main
+    @include mainContainer
+
+    .banner
+        @include flex(column, center, center)
+        flex-grow: 1
+        width: 100%
+        padding: 1rem
+        img
+            margin-bottom: 1rem
+            width: 100%
+            max-width: 200px
+            @include mq("small")
+                width: 100%
+                max-width: 400px
+
+    .welcome
+        @include flex(column, space-between, center)
+        flex-grow: 1
+        width: 100%
+        padding: 1rem
+        background-color: $tertiary-color-light
+        border-radius: 1rem
+        @include mq("medium")
+            padding-top: 8rem
+            align-self: stretch
+            margin: 1rem
+            order: 2
+        div
+            @include flex(column, center, center)
+            h1
+                font-size: 2.5rem
+                margin: 3rem 0 1rem
+                color: $secondary-color
+                max-width: 400px
+                text-align: center
+            .totalUsers
+                @include flex(row, center, center)
+                margin: 1rem
+                padding: .5rem
+                border: 3px solid $secondary-color
+                border-radius: 50%
+                width: 80px
+                height: 80px
+                p
+                    text-align: center
+                    span
+                        font-size: 2rem
+                        font-weight: 700
+                        color: $secondary-color
+                        margin: 0 0.5rem
+            .button
+                @include button($secondary-color, $main-color)
+                margin-top: 1rem
+
+        .testdata
+            justify-self: flex-end
+            padding: 1rem
+            margin: 1rem
+            margin-top: 4rem
+            border-radius: .5rem
+            transition: all 0.2s ease-in-out
+            &:hover
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
+                background-color: $tertiary-color !important
+                cursor: pointer

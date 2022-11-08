@@ -1,0 +1,24 @@
+@use '../sass/_global' as *
+
+.footer
+    @include flex(column, center, center)
+    background-color: $secondary-color
+    color: $tertiary-color
+    font-family: $secondary-font
+    font-size: 1.5rem
+    padding: 1rem
+    width: 100%
+    min-height: 4rem
+    a
+        color: $tertiary-color
+        text-decoration: none
+        &:hover
+            color: $main-color-dark
+    p.credits
+        font-size: 1rem
+        span
+            padding: 0.5rem
+            display: inline-block
+            vertical-align: middle
+            &:hover
+                color: $main-color-dark

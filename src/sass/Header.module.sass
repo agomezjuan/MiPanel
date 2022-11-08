@@ -1,0 +1,46 @@
+@use './_global' as * 
+
+header
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    padding: 1rem
+    @include mq("medium")
+        flex-direction: row
+        padding: 2rem
+    .logo
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        max-width: 200px
+        img
+            height: 60px
+        span
+            font-size: 3rem
+            font-weight: 700
+            font-family: $main-font
+            color: $secondary-color
+            margin-left: 1rem
+
+    ul.menu
+        @include flex(column, center, center)
+        margin-top: 2rem
+        @include mq("small")
+            flex-direction: row
+            margin-top: 0
+        li
+            margin: 0.8rem 1rem
+            list-style: none
+            a
+                color: $secondary-color
+                font-size: 1.5rem
+                text-decoration: none
+                padding: 0.5rem 1rem
+                border-radius: 0.5rem
+                transition: all 0.2s ease-in-out
+                &:hover
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
+                    background-color: $main-color-light !important

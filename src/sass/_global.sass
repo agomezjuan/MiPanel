@@ -1,0 +1,92 @@
+// IMPORT FONTS
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap')
+
+// Variables
+/* Breakpoints */
+$breakpoints: ("small": 410px, "medium": 768px, "large": 992px,"xlarge": 1440px)
+
+/* Fonts */
+$main-font: 'Ubuntu', sans-serif
+$secondary-font: 'Roboto', sans-serif
+
+/* Colors */
+$main-color: #55ffde
+$main-color-dark: #00c9a7
+$main-color-light: #a7ffeb
+
+$secondary-color: #2e2b6d
+$secondary-color-dark: #1a193d
+$secondary-color-light: #5e5b9d
+
+$tertiary-color: #e8e7f7
+$tertiary-color-dark: #b5b4c7
+$tertiary-color-light: #f5f4f9
+
+// Reset
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+html
+    font-size: 62.5%
+
+#root
+    display: flex
+    flex-direction: column
+    height: 100vh
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Ubuntu', sans-serif
+    text-align: center
+    color: $secondary-color
+
+// Mixins
+/* Display Flex */
+@mixin flex($direction, $justify, $align)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+
+/* Button */
+@mixin button($color, $bgColor)
+    color: $color
+    background-color: $bgColor
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
+    border: none
+    border-radius: 0.5rem
+    padding: 0.5rem 1rem
+    font-size: 1.5rem
+    cursor: pointer
+    &:hover
+        background-color: darken($bgColor, 20%)
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px
+
+/* Texts */
+@mixin text($size, $weight, $color)
+    font-size: $size
+    font-weight: $weight
+    color: $color
+
+/* Main Container */
+@mixin mainContainer
+    @include flex(column, center, center)
+    flex-grow: 1
+    width: 100%
+    height: 100%
+    align-self: stretch
+    padding: 6rem 1rem 6rem
+    @include mq("medium")
+        padding: 2rem
+        flex-direction: row
+
+// MEDIA QUERIES
+/* Break Points Mixin */
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints)
+    @if map-has-key($mq-breakpoints, $mq-breakpoint)
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint)
+
+    @media screen and (min-width: #{$mq-breakpoint})
+        @content

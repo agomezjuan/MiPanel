@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Panel de Administración de Usuarios
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta app fue realizada como prueba de nivel de React para acceder a la vacante de desarrollador Frontend en [Wipay](https://wipay.es/).
 
-## Available Scripts
+Es un panel de administración de usuarios que contempla las operaciones básicas de tipo CRUD (Create, Read, Update, Delete). Contiene las siguientes funcionalidades:
 
-In the project directory, you can run:
+1. Una pantalla inicial donde se muestre el número total de usuarios actuales.
+   ![Panel de administracion](./src/assets/images/screenshot1.png)
+2. Una pantalla para visualizar el listado de usuarios.
+   ![Panel de administracion](./src/assets/images/screenshot2.png)
+3. Una pantalla para visualizar los datos de un usuario.
+   ![Panel de administracion](./src/assets/images/screenshot3.png)
+4. Una pantalla para editar los datos de un usuario.
+   ![Panel de administracion](./src/assets/images/screenshot4.png)
+5. Un botón de acción para eliminar el usuario.
+
+   - Dicho botón pregunta si se está seguro antes de eliminar el usuario.
+   - Dicho botón aparece en el listado de usuarios, en la vista de detalles de usuario y en la vista de edición de usuario.
+
+   ![Panel de administracion](./src/assets/images/screenshot5.png)
+
+Un usuario contiene los siguientes atributos junto a sus validaciones:
+
+1. Un correo electrónico:
+   - De tipo String.
+   - Debe comprobarse que sea un correo electrónico válido.
+2. Una contraseña:
+   - De tipo String.
+   - Debe tener entre 6 y 12 caracteres de longitud.
+3. Una fecha de creación:
+   - De tipo Date.
+4. Una fecha de última actualización:
+   - De tipo Date.
+   - Este valor debe actualizarse cada vez que se actualice un usuario.
+   - Por defecto, tiene el mismo valor que la fecha de creación.
+
+El proyecto fue desarrollado con [Create React App](https://github.com/facebook/create-react-app). Al descargarlo se debe ejecutar el comando `npm install` para instalar las dependencias.
+
+## Dependencias utilizadas
+
+- React Router
+- Material UI
+- Lodash
+- Moment
+- React Hook Form
+- Sass
+- Sweet Alert 2
+- uuid v4
+- validator
+
+## Scripts disponibles
+
+En el directorio del proyecto puedes ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ejecuta la aplicación en modo desarrollador.\
+Abrir [http://localhost:3000](http://localhost:3000) para verla en el navegador.
